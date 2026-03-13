@@ -1,0 +1,62 @@
+{
+  "workspace": {
+    "baseline": {
+      "suite": "workspace",
+      "config_name": "baseline",
+      "benign_utility": 0.67,
+      "utility_under_attack": 0.21,
+      "attack_success_rate": 0.61,
+      "total_benign_tasks": 100,
+      "benign_tasks_completed": 67,
+      "total_attack_cases": 100,
+      "attack_cases_task_completed": 68,
+      "attack_cases_succeeded": 61,
+      "total_tools_blocked": 0,
+      "total_injections_detected": 0
+    },
+    "defended": {
+      "suite": "workspace",
+      "config_name": "defended",
+      "benign_utility": 0.67,
+      "utility_under_attack": 0.42,
+      "attack_success_rate": 0.34,
+      "total_benign_tasks": 100,
+      "benign_tasks_completed": 67,
+      "total_attack_cases": 100,
+      "attack_cases_task_completed": 66,
+      "attack_cases_succeeded": 34,
+      "total_tools_blocked": 100,
+      "total_injections_detected": 74
+    }
+  },
+  "banking": {
+    "baseline": {
+      "suite": "banking",
+      "config_name": "baseline",
+      "benign_utility": 0.75,
+      "utility_under_attack": 0.23,
+      "attack_success_rate": 0.67,
+      "total_benign_tasks": 100,
+      "benign_tasks_completed": 75,
+      "total_attack_cases": 100,
+      "attack_cases_task_completed": 69,
+      "attack_cases_succeeded": 67,
+      "total_tools_blocked": 0,
+      "total_injections_detected": 0
+    },
+    "defended": {
+      "suite": "banking",
+      "config_name": "defended",
+      "benign_utility": 0.64,
+      "utility_under_attack": 0.43,
+      "attack_success_rate": 0.31,
+      "total_benign_tasks": 100,
+      "benign_tasks_completed": 64,
+      "total_attack_cases": 100,
+      "attack_cases_task_completed": 65,
+      "attack_cases_succeeded": 31,
+      "total_tools_blocked": 100,
+      "total_injections_detected": 24
+    }
+  }
+}
