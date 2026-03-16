@@ -36,43 +36,52 @@ class DefenseConfig:
 
 @dataclass
 class ToolClassification:
-    """Classification of tools by permission level."""
+    """Classification of tools by permission level.
+
+    Tool names match AgentDojo benchmark tools:
+    - Workspace: email, calendar, cloud drive tools
+    - Banking: financial transaction tools
+    """
 
     # Read-only tools (safe, no side effects)
     read_tools: Set[str] = field(default_factory=lambda: {
-        # Workspace/Email
-        "search_emails", "get_email_by_id", "list_emails",
-        "search_contacts", "get_contact_by_id", "list_contacts",
-        "get_calendar_events", "search_calendar",
-        "get_file", "list_files", "search_files",
-        # Banking
-        "get_balance", "get_transactions", "get_scheduled_transactions",
-        "get_account_info", "get_user_info", "get_iban",
-        # General
-        "get_current_time", "get_user_preferences",
+        # Workspace - Email (AgentDojo names)
+        "get_unread_emails", "get_sent_emails", "get_received_emails",
+        "get_draft_emails", "search_emails",
+        "search_contacts_by_name", "search_contacts_by_email",
+        # Workspace - Calendar
+        "get_current_day", "search_calendar_events", "get_day_calendar_events",
+        # Workspace - Cloud Drive
+        "list_files", "search_files", "search_files_by_filename", "get_file_by_id",
+        # Banking (AgentDojo names)
+        "get_balance", "get_most_recent_transactions", "get_scheduled_transactions",
+        "get_iban", "get_user_info", "read_file",
     })
 
     # Write-capable tools (can modify state)
     write_tools: Set[str] = field(default_factory=lambda: {
-        # Workspace/Email
-        "send_email", "reply_to_email", "forward_email",
-        "create_contact", "update_contact", "delete_contact",
-        "create_calendar_event", "update_calendar_event", "delete_calendar_event",
-        "create_file", "update_file", "delete_file",
-        "share_file", "invite_to_event",
+        # Workspace - Email
+        "send_email", "delete_email",
+        # Workspace - Calendar
+        "create_calendar_event", "cancel_calendar_event",
+        "reschedule_calendar_event", "add_calendar_event_participants",
+        # Workspace - Cloud Drive
+        "create_file", "delete_file", "append_to_file", "share_file",
         # Banking
-        "transfer_money", "schedule_transaction", "cancel_transaction",
-        "update_scheduled_transaction",
+        "send_money", "schedule_transaction", "update_scheduled_transaction",
+        "update_user_info", "update_password",
     })
 
     # Sensitive tools (high-risk, require extra confirmation)
     sensitive_tools: Set[str] = field(default_factory=lambda: {
         # High financial risk
-        "transfer_money", "schedule_transaction",
-        # External communication
-        "send_email", "forward_email", "share_file",
-        # Data exposure
-        "invite_to_event",
+        "send_money", "schedule_transaction", "update_scheduled_transaction",
+        # External communication / data exfiltration risk
+        "send_email", "share_file",
+        # Destructive actions
+        "delete_email", "delete_file", "cancel_calendar_event",
+        # Account security
+        "update_password", "update_user_info",
     })
 
     def get_category(self, tool_name: str) -> ToolCategory:
@@ -134,8 +143,8 @@ class TaskClassification:
 class EvaluationConfig:
     """Configuration for evaluation runs."""
 
-    # Model settings
-    model_name: str = "gpt-4o-mini"
+    # Model settings (use full model name for AgentDojo compatibility)
+    model_name: str = "gpt-4o-mini-2024-07-18"
     temperature: float = 0.0
     max_tokens: int = 4096
 
