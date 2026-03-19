@@ -1,0 +1,4 @@
+metric,baseline,defended
+benign_utility,1.0,1.0
+utility_under_attack,0.0,0.0
+targeted_ASR,1.0,1.0

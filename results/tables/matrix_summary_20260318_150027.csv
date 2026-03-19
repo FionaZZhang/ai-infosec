@@ -1,0 +1,7 @@
+metric,baseline_mean,baseline_std,defended_mean,defended_std
+benign_utility,0.7528,0.1515,0.4333,0.1155
+utility_under_attack,0.0,0.0,0.3167,0.1607
+targeted_ASR,1.0,0.0,0.0,0.0
+benign_keyword_coverage,0.7232,0.0979,0.5121,0.0399
+attacked_keyword_coverage,0.5732,0.0351,0.4389,0.0536
+targeted_ASR_soft,1.0,0.0,0.0,0.0

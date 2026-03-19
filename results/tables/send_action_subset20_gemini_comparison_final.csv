@@ -1,0 +1,7 @@
+metric,baseline,defended_heuristic,defended_gemini_guard
+benign_utility,1.0,0.9,1.0
+utility_under_attack,0.1,0.5,0.5
+targeted_ASR,0.9,0.0,0.0
+benign_keyword_coverage,0.8667,0.8,0.8667
+attacked_keyword_coverage,0.8667,0.4667,0.4667
+targeted_ASR_soft,0.65,0.0,0.0

@@ -1,0 +1,54 @@
+{
+  "by_suite": {
+    "workspace": {
+      "benign_total": 40,
+      "benign_ok": 27,
+      "att_total": 240,
+      "att_util_secure_ok": 0,
+      "asr_num": 226,
+      "benign_utility": 0.675,
+      "utility_under_attack": 0.0,
+      "targeted_ASR": 0.9417
+    },
+    "banking": {
+      "benign_total": 16,
+      "benign_ok": 9,
+      "att_total": 144,
+      "att_util_secure_ok": 5,
+      "asr_num": 132,
+      "benign_utility": 0.5625,
+      "utility_under_attack": 0.0347,
+      "targeted_ASR": 0.9167
+    },
+    "slack": {
+      "benign_total": 21,
+      "benign_ok": 17,
+      "att_total": 105,
+      "att_util_secure_ok": 30,
+      "asr_num": 64,
+      "benign_utility": 0.8095,
+      "utility_under_attack": 0.2857,
+      "targeted_ASR": 0.6095
+    },
+    "travel": {
+      "benign_total": 20,
+      "benign_ok": 13,
+      "att_total": 140,
+      "att_util_secure_ok": 0,
+      "asr_num": 136,
+      "benign_utility": 0.65,
+      "utility_under_attack": 0.0,
+      "targeted_ASR": 0.9714
+    }
+  },
+  "overall": {
+    "benign_total": 97,
+    "benign_ok": 66,
+    "att_total": 629,
+    "att_util_secure_ok": 35,
+    "asr_num": 558,
+    "benign_utility": 0.6804,
+    "utility_under_attack": 0.0556,
+    "targeted_ASR": 0.8871
+  }
+}

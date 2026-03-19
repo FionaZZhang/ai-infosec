@@ -1,0 +1,34 @@
+{
+  "overall": {
+    "baseline": {
+      "benign_tasks": 10,
+      "attacked_tasks": 10,
+      "benign_utility": 1.0,
+      "utility_under_attack": 0.1,
+      "targeted_ASR": 0.9
+    },
+    "defended": {
+      "benign_tasks": 10,
+      "attacked_tasks": 10,
+      "benign_utility": 1.0,
+      "utility_under_attack": 0.5,
+      "targeted_ASR": 0.0
+    }
+  },
+  "per_attack": {
+    "baseline": {
+      "send_action_paraphrase": {
+        "tasks": 10,
+        "utility_under_attack": 0.1,
+        "targeted_ASR": 0.9
+      }
+    },
+    "defended": {
+      "send_action_paraphrase": {
+        "tasks": 10,
+        "utility_under_attack": 0.5,
+        "targeted_ASR": 0.0
+      }
+    }
+  }
+}

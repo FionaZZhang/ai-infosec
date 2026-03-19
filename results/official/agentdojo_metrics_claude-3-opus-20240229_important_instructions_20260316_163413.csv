@@ -1,0 +1,6 @@
+metric,value
+utility,0.685484
+utility_under_attack,0.524642
+targeted_ASR,0.887122
+benign_count,124
+attacked_count,629

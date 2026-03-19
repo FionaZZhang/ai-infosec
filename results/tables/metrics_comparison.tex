@@ -1,0 +1,26 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\begin{document}
+\section*{Agent Security Metrics Comparison}
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{6.2cm} c c c >{\raggedright\arraybackslash}p{4.7cm}}
+\toprule
+Setting & Benign Utility $\uparrow$ & Utility Under Attack $\uparrow$ & Targeted ASR $\downarrow$ & Eval Split \\
+\midrule
+Baseline (naive, no defense) – our run & 1.000 & 0.000 & 1.000 & subset50mix (25 benign / 25 attacked) \\ 
+Defended-Heuristic (deterministic summarizer) – our run & 1.000 & 1.000 & 0.000 & subset50mix (25 / 25) \\ 
+Defended-Gemini Flash (summarizer=Gemini) – our run & 1.000 & 1.000 & 0.000 & subset50mix sample (4 / 2) \\ 
+AgentDojo official reference (Claude-3-Opus) & 0.680 & 0.056 & 0.887 & official full benchmark (97 benign / 629 attacked) \\ 
+\bottomrule
+\end{tabular}
+\caption{Comparison across baseline, defended variants, and AgentDojo official reference metrics. Note: rows are not fully apples-to-apples because evaluation splits differ.}
+\end{table}
+
+\paragraph{Notes.}
+Higher is better for benign utility and utility under attack. Lower is better for targeted ASR. The AgentDojo official reference row is computed from the official run artifacts (97 benign, 629 attacked), while our MVP rows use smaller subsets.
+
+\end{document}

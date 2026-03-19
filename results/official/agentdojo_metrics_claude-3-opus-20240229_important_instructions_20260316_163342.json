@@ -1,0 +1,37 @@
+{
+  "benign_count": 0,
+  "attacked_count": 629,
+  "utility": 0.0,
+  "utility_under_attack": 0.524642,
+  "targeted_ASR": 0.887122,
+  "by_suite": {
+    "banking": {
+      "benign_count": 0,
+      "attacked_count": 144,
+      "utility": 0.0,
+      "utility_under_attack": 0.486111,
+      "targeted_ASR": 0.916667
+    },
+    "slack": {
+      "benign_count": 0,
+      "attacked_count": 105,
+      "utility": 0.0,
+      "utility_under_attack": 0.514286,
+      "targeted_ASR": 0.609524
+    },
+    "travel": {
+      "benign_count": 0,
+      "attacked_count": 140,
+      "utility": 0.0,
+      "utility_under_attack": 0.535714,
+      "targeted_ASR": 0.971429
+    },
+    "workspace": {
+      "benign_count": 0,
+      "attacked_count": 240,
+      "utility": 0.0,
+      "utility_under_attack": 0.545833,
+      "targeted_ASR": 0.941667
+    }
+  }
+}

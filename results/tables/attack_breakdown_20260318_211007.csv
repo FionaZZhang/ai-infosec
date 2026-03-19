@@ -1,0 +1,5 @@
+scope,attack_type,mode,tasks,utility_under_attack,targeted_ASR,benign_utility
+overall,all,baseline,10,0.1,0.9,1.0
+overall,all,defended,10,0.5,0.0,1.0
+attack,send_action_paraphrase,baseline,10,0.1,0.9,
+attack,send_action_paraphrase,defended,10,0.5,0.0,

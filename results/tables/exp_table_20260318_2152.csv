@@ -1,0 +1,4 @@
+variant,benign_utility,utility_under_attack,targeted_ASR,benign_keyword_coverage,attacked_keyword_coverage,targeted_ASR_soft
+baseline,1.0,0.1,0.9,0.8667,0.8667,0.65
+defended_heuristic,0.9,0.8,0.0,0.6667,0.6,0.0
+defended_heuristic_gemini,1.0,0.8,0.0,0.7333,0.6,0.0
